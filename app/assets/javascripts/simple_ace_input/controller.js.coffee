@@ -3,7 +3,7 @@ class AceInput
     @editor   = ace.edit(editor)
     @session  = @editor.getSession()
     @renderer = @editor.renderer
-    @textarea = $('textarea.ace')
+    @textarea = $("##{$(editor).data('target')}")
     @setOptions()
     @updateMode()
     @updateTheme()
