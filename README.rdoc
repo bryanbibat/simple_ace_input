@@ -19,12 +19,12 @@ For the whole kit and kaboodle add the following to your application.js:
     //= require simple_ace_input
 
 For a minimally viable setup (no modes or themes) add the following to your application.js:
-    //= ace/ace
-    //= simple_ace_input/controller
+    //= require ace/ace
+    //= require simple_ace_input/controller
 
 Then add only the modes and themes you want:
-    //= ace/mode-css
-    //= ace/mode-solarized-dark
+    //= require ace/mode-css
+    //= require ace/mode-solarized-dark
 
 
 Another option and one worth considering (b/c ACE is quite large) is only loading the scripts on pages where ACE is actually needed.
@@ -51,8 +51,8 @@ Just designate a textarea input <tt>as: :ace</tt>.
 
 === Options
 
-Set the <tt>mode</tt>, <tt>theme</tt>, and <tt>height</tt> by passing them as <tt>data-</tt> attributes.
-    data: { ace_mode: 'html', ace_theme: 'carto_light', ace_height: '600' }
+Set the <tt>mode</tt>, <tt>theme</tt>, and <tt>height</tt> by passing them as <tt>ace-</tt> attributes.
+    ace: { ace_mode: 'html', ace_theme: 'carto_light', ace_height: '600' }
 
 If you would like to change the defaults, run the following to generate an initializer where you can set your own defaults.
     % rails g simple_ace_input:config
