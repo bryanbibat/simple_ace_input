@@ -1,6 +1,6 @@
 class AceInput
-  constructor: ->
-    @editor   = ace.edit("input")
+  constructor: (editor)->
+    @editor   = ace.edit(editor)
     @session  = @editor.getSession()
     @renderer = @editor.renderer
     @textarea = $('textarea.ace')
@@ -32,4 +32,6 @@ class AceInput
     ace.session.on "change", ->
       ace.textarea.val ace.session.getValue()
 
-window.AceInput = AceInput
+$(document).ready ->
+  $('.ace-input').each (index)->
+    editor = new AceInput(this)
