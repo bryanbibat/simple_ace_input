@@ -13724,9 +13724,7 @@ var RenderLoop = function(onRender, win) {
 
 exports.RenderLoop = RenderLoop;
 });
-define("text!ace/css/editor.css", [], "@import url(//fonts.googleapis.com/css?family=Droid+Sans+Mono);\n" +
-  "\n" +
-  "\n" +
+define("text!ace/css/editor.css", [], 
   ".ace_editor {\n" +
   "    position: absolute;\n" +
   "    overflow: hidden;\n" +
